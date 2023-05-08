@@ -23,10 +23,15 @@ body{
   margin: 0 0 0 0 !important;
   padding: 0 0 20px 0 !important;
 }
-
+@media only screen and (max-width: 576px) {
+  .footer-p-home{
+    margin: 0 0 60px 0 !important;
+    padding: 0 0 0 0 !important;
+  }
+}
 .footer-p-home{
-  margin: 0 0 0 0 !important;
-  padding: 20px 0 0 0 !important;
+  margin: 0 0 0 0;
+  padding: 20px 0 0 0 ;
 }
 
 /* NAVBAR STYLES START */
