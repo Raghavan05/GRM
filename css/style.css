@@ -18,7 +18,33 @@ body{
   min-height: 100vh;
   background-color: #000;
 } */
+.head-logo{
+  width: 55px;
+  height: 50px;
+}
 
+@media screen and (max-width: 990px) {
+  .hide-foot{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .foot-ul{
+    display: flex;
+    flex-direction: row;
+
+  }
+
+}
+@media screen and (min-width: 1024px) {
+  .owl-item-home{
+    margin-right: 300px !important;
+    margin-left: 300px !important;
+  
+  }
+  
+}
 .footer-p-common{
   margin: 0 0 0 0 !important;
   padding: 200px !important;
@@ -30,9 +56,10 @@ body{
   }
 } */
 .footer-home{
-  background-color: #1b1b1b;
+  background-color: #1c1c1c;
   margin: 0 0 0 0;
-  padding: 50px ;
+  padding: 40px ;
+  padding-bottom: 40px !important;
 }
 
 /* NAVBAR STYLES START */
@@ -67,6 +94,7 @@ body{
     align-content: center;
     /* border-radius: 1.25rem 1.25rem 0 0; */
     transition: .4s;
+    z-index: 9999;
   }
 }
 
