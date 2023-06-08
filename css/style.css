@@ -21,17 +21,18 @@ body{
 
 .footer-p-common{
   margin: 0 0 0 0 !important;
-  padding: 0 0 20px 0 !important;
+  padding: 200px !important;
 }
-@media only screen and (max-width: 576px) {
+/* @media only screen and (max-width: 576px) {
   .footer-p-home{
     margin: 0 0 60px 0 !important;
     padding: 0 0 0 0 !important;
   }
-}
-.footer-p-home{
+} */
+.footer-home{
+  background-color: #1b1b1b;
   margin: 0 0 0 0;
-  padding: 20px 0 0 0 ;
+  padding: 50px ;
 }
 
 /* NAVBAR STYLES START */

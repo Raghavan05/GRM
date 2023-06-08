@@ -119,14 +119,14 @@
 
 
 
-    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" >
       <!-- <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
       </ol> -->
       <div class="carousel-inner">
-        <div class="carousel-item active">
+        <div class="carousel-item active" data-touch="true">
           <picture>
             <source media="(min-width: 1025px)" srcset="images/GRM-img/carousel/003.jpg">
             <source media="(min-width: 600px)" srcset="images/GRM-img/002.jpeg">
@@ -144,7 +144,7 @@
               simplicity.</p>
           </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" data-touch="true">
           <picture>
             <source media="(min-width: 1025px)" srcset="images/GRM-img/carousel/002.jpg">
             <source media="(min-width: 600px)" srcset="images/GRM-img/006.jpeg">
@@ -161,7 +161,7 @@
               simplicity.</p>
           </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" data-touch="true">
           <picture>
             <source media="(min-width: 1025px)" srcset="images/GRM-img/carousel/001.jpg">
             <source media="(min-width: 600px)" srcset="images/GRM-img/009.jpeg">
@@ -333,17 +333,69 @@
       </nav>
     
 
-    <div class="footer">
-      <div class="container-fluid text-center footer-p-home">
-        <p style="margin: 0;"> Privacy Polices | FAQs | T&C </p>
-        <p >
+    <div class="row container-fluid footer-home">
+      <div class="col-3">
+        <h3 class=""><a href="index.html" class="text-white"><b> GRM Studios </b></a></h3>
+        <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa asperiores dolor voluptas ut, doloribus repellendus rerum
+        laborum beatae, at sed quam odit! Eum soluta eos eius cumque officiis porro recusandae.</p>
+        <div class="d-flex flex-row ">
+          <i class='bx bx-home-alt nav__icon px-4'></i>
+          <i class='bx bx-home-alt nav__icon px-4'></i>
+          <i class='bx bx-home-alt nav__icon px-4'></i>  
+        </div>
+      </div>
+
+      <div class="col-3">
+        <ul class="list-unstyled ml-5 pl-5">
+          <li><a class="text-white" href="single.html">Portfolio</a></li>
+          <li><a class="text-white" href="services.html">Services</a></li>
+          <li><a class="text-white" href="about.html">About us</a></li>
+          <li><a class="text-white" href="contact.html">contact us</a></li>
+          <li><a class="text-white" href="">FAQs</a></li>
+        </ul>
+      </div>
+
+      <div class="col-3 ">
+        <ul class="list-unstyled">
+          <li><a class="text-white" href="single.html">Privacy Policies</a></li>
+          <li><a class="text-white" href="services.html">Terms And Conditions</a></li>
+          <li><a class="text-white" href="about.html">Cancellation or <br> Refund policies</a></li>
+        </ul>
+        
+        <!-- <a class="text-white" href="contact.html">contact us</a>
+        <a class="text-white" href="">FAQs</a> -->
+      </div>
+
+      <div class="col-3">
+        <h3 class=""><a href="index.html" class="text-white"><b> Get in touch</b></a></h3>
+        <div class="d-flex flex-row">
+          <div class="d-flex flex-column">
+          <i class="bx bx-location-plus p-3" style="font-size:25px;"></i>
+          <i class="bx bx-phone p-3" style="font-size:25px;"></i>
+          <i class="bx bx-message p-3" style="font-size:25px;"></i>
+          </div>
+          <ul class="list-unstyled ">
+            <li class="text-white">86, Puttuthopu road, Madurai, Tamil Nadu, India - 625016.</li>
+            <br>
+            <li><a class="text-white" href="#">+91 7339574461</a></li>
+            <br>
+            <li class="text-white">grmanistudio1920@gmail.com</li>
+          </ul>
+        </div> 
+      </div>
+        
+        
+        
+        
+        
+        <p class="d-flex justify-content-center">
           <!-- Link back to GRJ can't be removed. Template is licensed under CC BY 3.0. -->
            &copy;
           <script>document.write(new Date().getFullYear());</script> | &ThinSpace;<a href="" target="_blank">GRM Studios</a>
           <!-- Link back to GRJ can't be removed. Template is licensed under CC BY 3.0. -->
         </p>
         <!-- <p style="margin: 0;">Designed by Raghav</p> -->
-      </div>
+      
     </div>
 
 
@@ -351,6 +403,20 @@
 
 
   </div>
+  <!-- <script>
+    window.addEventListener('scroll', function() {
+      // Check if the user has reached the bottom of the page
+      if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+        // Redirect to the next page
+        window.location.href = 'single.html'; // Replace with the URL of your next page
+      }
+    });
+  </script> -->
+  <script>
+    $('.carousel').carousel({
+  Touch:true
+})
+  </script>
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>

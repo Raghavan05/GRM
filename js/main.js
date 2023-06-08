@@ -5,7 +5,7 @@
 // var url = window.location.href;
 
 // // Loop through all the links in the navigation bar
-// var links = document.querySelectorAll('.nav__menu .nav__link');
+// var links = document.addEventListener('');
 // for (var i = 0; i < links.length; i++) {
 
 //   // If the link's URL matches the current page URL, add the active class
