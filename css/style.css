@@ -18,6 +18,11 @@ body{
   min-height: 100vh;
   background-color: #000;
 } */
+
+.faviconHead{
+  height: 123px;
+  font-size: 10px !important;
+}
 .whyus1, .whyus2, .whyus3, .whyus4, .whyus5, .whyus6{
   font-size: 20px !important;
 }

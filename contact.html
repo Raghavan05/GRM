@@ -9,8 +9,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
     <link rel="shortcut icon" href="images/GRM-img/Logo2.png" type="image/x-icon">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="css/magnific-popup.css"> -->
@@ -142,7 +142,7 @@
 
         <div class="row">
           <div class="col-lg-8 mb-5">
-            <form target="_blank" action="javascript:sendWhatsAppMessage()" method="get" enctype="text/plain">
+            <form action="javascript:sendWhatsAppMessage()" target="_blank" method="get" enctype="text/plain">
               <div class="row form-group">
                 <div class="col-md-6 mb-3 mb-md-0">
                   <label class="text-white" for="fname">First Name</label>
@@ -210,8 +210,13 @@
           <script>document.write(new Date().getFullYear());</script> | &ThinSpace;<a href="" target="_blank">GRM Studios</a>
           <!-- Link back to GRJ can't be removed. Template is licensed under CC BY 3.0. -->
         </p>
-        <!-- <p style="margin: 0;">Designed by Raghav</p> -->
-         <p class="d-block d-sm-none">
+
+        <div class="d-flex flex-row mb-2">
+          <p class="text-white" style="margin: 0;">Designed by Raghav</p>
+          <a href="https://www.linkedin.com/in/raghavan-r1/" target="_blank" class="pl-2"><span class="icon-linkedin"></span></a>
+        </div>
+
+        <p class="d-block d-sm-none">
           <!-- Link back to GRJ can't be removed. Template is licensed under CC BY 3.0. -->
           Copyright &copy;
           <script>document.write(new Date().getFullYear());</script> All rights reserved | <i class="icon-heart-o"
@@ -314,19 +319,21 @@
   </div>
 
   <script>
-    // Setting the value
-    var textarea = document.getElementById("myTextarea");
-    textarea.value = "This is Joshua Delightson here";
-    // Retrieving the value
-    var textareaValue = textarea.value;
-    console.log(textareaValue);
+      // Setting the value
+      var textarea = document.getElementById("myTextarea");
+      textarea.value = "This is Joshua Delightson here";
+      // Retrieving the value
+      var textareaValue = textarea.value;
+      console.log(textareaValue);
+    
+    
     function sendWhatsAppMessage() {
       // Get the form data
       var name = document.getElementById('fname').value;
       var name = document.getElementById('lname').value;
       var email = document.getElementById('email').value;
-      var email = document.getElementById('subject').value;
-      var message = document.getElementById('message').value;
+      // var email = document.getElementById('subject').value;
+      var message = textareaValue;
 
       // Construct the WhatsApp Click to Chat API URL
       var phoneNumber = '917339574461'; // Replace with the WhatsApp phone number
@@ -334,7 +341,14 @@
       var url = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(messageText);
 
       // Redirect to the WhatsApp Click to Chat API URL
-      window.location.href = url;
+      if(messageText === '' || name === ''){
+        alert('Please fill in the required fields')
+      }
+      else{
+        window.open(url, "_blank");
+        // window.location.href = url;
+
+      }
     }
   </script>
   <!--     
