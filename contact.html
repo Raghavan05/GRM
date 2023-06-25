@@ -326,7 +326,7 @@
 
   </div>
 
-  <script>
+  <script type="text/javascript">
       // Setting the value
       var textarea = document.getElementById("myTextarea");
       textarea.value = "This is Joshua Delightson here";
@@ -336,9 +336,10 @@
     
     
     function sendWhatsAppMessage() {
+      // event.preventDefault();
       // Get the form data
-      var name = document.getElementById('fname').value;
-      var name = document.getElementById('lname').value;
+      var fname = document.getElementById('fname').value;
+      var lname = document.getElementById('lname').value;
       var email = document.getElementById('email').value;
       // var email = document.getElementById('subject').value;
       var message = textareaValue;
@@ -349,7 +350,7 @@
       var url = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(messageText);
 
       // Redirect to the WhatsApp Click to Chat API URL
-      if(messageText === '' || name === ''){
+      if(messageText === '' || fname === ''){
         alert('Please fill in the required fields')
       }
       else{
@@ -357,21 +358,15 @@
         // window.location.href = url;
 
       }
+
+      localStorage.setItem('firstname',fname)
+      localStorage.setItem('lastname',lname)
+      localStorage.setItem('MobileNumber',email)
+      localStorage.setItem('Message',message)
     }
+
+
   </script>
-  <!--     
-    <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name"><br>
-    
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email"><br>
-    
-      <label for="message">Message:</label>
-      <textarea id="message" name="message"></textarea><br>
-    
-      <button type="button" onclick="sendWhatsAppMessage()">Send Message on WhatsApp</button>
-    </form> -->
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
