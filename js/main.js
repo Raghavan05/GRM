@@ -1,5 +1,28 @@
 /* ==============MODIFIED FOR NAVBAR BOTTOM START============= */
 
+
+/*===============restrict key===============*/
+document.addEventListener("keydown", function(event) {
+	// Check the key code or key combination
+	if (event.ctrlKey && (event.key ==="u" || event.key === "U")) { // Replace "Enter" with the key you want to restrict
+	  event.preventDefault(); // Prevent the default behavior
+	//   return false;
+	}
+	if (event.ctrlKey && event.shiftKey && (event.key ==="i" || event.key ==="I" || event.key === 'j' || event.key ==="J")) { // Replace "Enter" with the key you want to restrict
+		event.preventDefault(); // Prevent the default behavior
+	  //   return false;
+	  }
+	
+	  if (event.keyCode === 44 && event.keyCode === 91) { // Windows key + Print Screen key
+		event.preventDefault(); // prevent default behavior
+	  }
+	  if (event.keyCode === 123) { // Windows key + Print Screen key
+		event.preventDefault(); // prevent default behavior
+	  }
+	
+	  console.log(event.code)
+  });
+  
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 // Get the current page URL
 // var url = window.location.href;
