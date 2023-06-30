@@ -1,125 +1,5 @@
 /* Modified CSS */
 
-/* NAVBAR STYLE START */
-
-.navigation{
-  width: 100%;
-  height: 70px;
-  background-color: #fff;
-  position: fixed;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px 10px 0 0 ;
-}
-.navigation ul{
-  display: flex;
-  width: 350px;
-}
-
-.navigation ul li{
-  position: relative;
-  list-style: none;
-  width: 70px;
-  height: 70px;
-  z-index: 1;
-}
-.navigation ul li a{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  text-align: center;
-  font-weight: 500;
-}
-
-.navigation ul li a .icon-bt-nav{
-  position: relative;
-  display: block;
-  line-height: 75px;
-  font-size: 1.5em;
-  text-align: center;
-  transition: 0.5s;
-  color: #000;
-}
-
-.navigation ul li.active a .icon-bt-nav{
-  transform: translateY(-32px);
-} 
-
-.navigation ul li a .text-bt-nav{
-  position: absolute;
-  color: #000;
-  font-weight: 400;
-  font-size: 0.75rem;
-  letter-spacing: 0.05em;
-  transition: 0.5s;
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.navigation ul li.active a .text-bt-nav{
-  opacity: 1;
-  transform: translateY(10px);
-}
-
-.indicator{
-  position: absolute;
-  top: -50%;
-  width: 70px;
-  height: 70px;
-  background-color: red;
-  border-radius: 50%;
-  border: 6px solid #000;
-  transition: 0.5s;
-}
-
-.indicator::before{
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: -21.5px;
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
-  border-top-right-radius: 20px;
-  box-shadow: 1px -10px 0 0 #000;
-}
-
-.indicator::after{
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: -21.5px;
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
-  border-top-left-radius: 20px;
-  box-shadow: -1px -10px 0 0 #000;
-}
-
-
-.navigation ul li:nth-child(1).active ~ .indicator{
-  transform: translateX(calc(45px * 0));
-}
-.navigation ul li:nth-child(2).active ~ .indicator{
-  transform: translateX(calc(60px * 1));
-}
-.navigation ul li:nth-child(3).active ~ .indicator{
-  transform: translateX(calc(60px * 2));
-}
-.navigation ul li:nth-child(4).active ~ .indicator{
-  transform: translateX(calc(60px * 3));
-}
-.navigation ul li:nth-child(5).active ~ .indicator{
-  transform: translateX(calc(60px * 4));
-}
-
-/* NAVBAR END */
-
 /* *{
   margin: 0;
   padding: 0;
@@ -139,9 +19,62 @@ body{
   background-color: #000;
 } */
 
-.footer-p{
-  margin: 0 0 0 0 !important;
-  padding: 20px 0 0 0 !important;
+.faviconHead{
+  height: 123px;
+  font-size: 10px !important;
+}
+.whyus1, .whyus2, .whyus3, .whyus4, .whyus5, .whyus6{
+  font-size: 20px !important;
+}
+.brand-name-div-foot{
+  margin-left: 10px;
+  margin-top: 15px;
+}
+.brand-name-div{
+  padding: 0 10px;
+}
+.site-menu {
+  padding: 0;
+}
+.head-logo{
+  width: 55px;
+  height: 50px;
+}
+
+@media screen and (max-width: 990px) {
+  .hide-foot{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .foot-ul{
+    display: flex;
+    flex-direction: row;
+
+  }
+
+}
+@media screen and (min-width: 1024px) {
+  .owl-item-home{
+    padding-right: 300px !important;
+    padding-left: 300px !important;
+  
+  }
+  
+}
+
+/* @media only screen and (max-width: 576px) {
+  .footer-p-home{
+    margin: 0 0 60px 0 !important;
+    padding: 0 0 0 0 !important;
+  }
+} */
+.footer-home{
+  background-color: #1c1c1c;
+  margin: 0 0 0 0;
+  padding: 40px ;
+  padding-bottom: 40px !important;
 }
 
 /* NAVBAR STYLES START */
@@ -176,6 +109,7 @@ body{
     align-content: center;
     /* border-radius: 1.25rem 1.25rem 0 0; */
     transition: .4s;
+    z-index: 9999;
   }
 }
 
